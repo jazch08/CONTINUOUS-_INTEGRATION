@@ -158,7 +158,7 @@ class GymMembership:
         if total_cost > 400:
             print("Aplicando descuento de $50.")
             total_cost = total_cost - 50
-        elif total_cost > 200 and total_cost <= 400:
+        elif total_cost > 200:
             print("Aplicando descuento de $20.")
             total_cost =total_cost - 20
         return total_cost
@@ -236,9 +236,8 @@ class GymMembership:
         if confirm.lower() == "si":
             print("Membresía confirmada.")
             return total_cost
-        else:
-            print("Membresía cancelada.")
-            return -1
+        print("Membresía cancelada.")
+        return -1
 
     def run(self):
         """
