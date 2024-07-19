@@ -1,3 +1,11 @@
+"""
+Módulo para la gestión de membresías de gimnasio.
+
+Este módulo define la clase `GymMembership` que permite a los usuarios seleccionar y personalizar
+su membresía de gimnasio, incluyendo la selección de planes, características adicionales, y
+aplicación de descuentos y recargos.
+"""
+
 class GymMembership:
     """
     Clase para representar una membresía de gimnasio.
@@ -146,12 +154,13 @@ class GymMembership:
         Retorna:
             float: El costo total después de aplicar descuentos por ofertas especiales.
         """
+
         if total_cost > 400:
             print("Aplicando descuento de $50.")
-            return total_cost - 50
-        elif total_cost > 200:
+            total_cost = total_cost - 50
+        elif total_cost > 200 and total_cost <= 400:
             print("Aplicando descuento de $20.")
-            return total_cost - 20
+            total_cost =total_cost - 20
         return total_cost
 
     def apply_premium_surcharge(self, total_cost):
